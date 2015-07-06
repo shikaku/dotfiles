@@ -1,0 +1,8 @@
+#!/bin/sh
+
+setxkbmap -layout "us,ru(winkeys)" -model pc105 -option grp:caps_toggle -option grp_led:scroll
+xscreensaver -no-splash &
+urxvtd
+# wicd-client -t &
+# nohup pidgin >/dev/null &
+# nohup icedove >/dev/null &

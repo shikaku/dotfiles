@@ -1,0 +1,10 @@
+SubmenuMenuActivateDelay=0 # [0-5000]
+RunCommand="gmrun"
+ShutdownCommand="/sbin/shutdown -h now"
+RebootCommand="/sbin/shutdown -r now"
+NetworkStatusDevice="wlan0"
+KeyWinMaximize="Alt+F11"
+KeyWinFullscreen="F11"
+WorkspaceNames=" 1 ", " 2 "
+
+# vim:ft=conf:

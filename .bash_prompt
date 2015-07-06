@@ -1,0 +1,114 @@
+# setup color variables
+color_is_on=
+color_red=
+color_green=
+color_yellow=
+color_blue=
+color_violet=
+color_aqua=
+color_white=
+color_gray=
+color_bold=
+color_bg_red=
+color_off=
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    color_is_on=true
+    color_red="\[$(/usr/bin/tput setaf 1)\]"
+    color_green="\[$(/usr/bin/tput setaf 2)\]"
+    color_yellow="\[$(/usr/bin/tput setaf 3)\]"
+    color_blue="\[$(/usr/bin/tput setaf 4)\]"
+    color_violet="\[$(/usr/bin/tput setaf 5)\]"
+    color_aqua="\[$(/usr/bin/tput setaf 6)\]"
+    color_white="\[$(/usr/bin/tput setaf 7)\]"
+    color_gray="\[$(/usr/bin/tput setaf 8)\]"
+    color_bold="\[$(/usr/bin/tput bold)\]"
+    color_off="\[$(/usr/bin/tput sgr0)\]"
+    color_error="$(/usr/bin/tput setab 1)$(/usr/bin/tput setaf 7)"
+    color_error_off="$(/usr/bin/tput sgr0)"
+fi
+
+# get git status
+function parse_git_status {
+    # clear git variables
+    GIT_BRANCH=
+    GIT_DIRTY=
+    GIT_DIRTY_CACHED=
+
+    # exit if no git found in system
+    local GIT_BIN=$(which git 2>/dev/null)
+    [[ -z "$GIT_BIN" ]] && return
+
+    # check we are in git repo
+    local CUR_DIR="$PWD"
+    while [ ! -d "${CUR_DIR}"/.git ] && [ "$CUR_DIR" != "" ]; do CUR_DIR=${CUR_DIR%/*}; done
+    [[ ! -d "${CUR_DIR}"/.git ]] && return
+
+    # 'git repo for dotfiles' fix: show git status only in home dir and other git repos
+    [[ "$CUR_DIR" == "$HOME" ]] && [[ "$PWD" != "$HOME" ]] && return
+
+    # get git branch
+    GIT_BRANCH=$($GIT_BIN symbolic-ref HEAD 2>/dev/null)
+    [[ -z "$GIT_BRANCH" ]] && return
+    GIT_BRANCH=${GIT_BRANCH#refs/heads/}
+
+    # get git status
+    [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && GIT_DIRTY=true
+    [[ $(git diff --cached 2> /dev/null | tail -n1) != "" ]] && GIT_DIRTY_CACHED=true
+}
+
+function prompt_command {
+
+    local PS1_GIT=
+    local PWDNAME=$PWD
+
+    # beautify working firectory name
+    if [ "$HOME" == "$PWD" ]; then
+        PWDNAME="~"
+    elif [ "$HOME" ==  ${PWD:0:${#HOME}} ]; then
+        PWDNAME="~${PWD:${#HOME}}"
+    fi
+
+    # parse git status and get git variables
+    parse_git_status
+
+    # build b/w prompt for git
+    [[ ! -z "$GIT_BRANCH" ]] && PS1_GIT=" (git: ${GIT_BRANCH})"
+
+    local color_user=
+    if $color_is_on; then
+        # set user color
+        case `id -u` in
+            0) color_user=$color_red ;;
+            *) color_user=$color_green ;;
+        esac
+
+        # build git status for prompt
+        if [ ! -z "$GIT_BRANCH" ]; then
+            if [ -z "$GIT_DIRTY" ]; then
+                if [ -z "$GIT_DIRTY_CACHED" ]; then
+                    PS1_GIT=" [${color_bold}${color_red}${GIT_BRANCH}${color_off}]"
+                else
+                    PS1_GIT=" [${color_bold}${color_red}${GIT_BRANCH}${color_yellow}*${color_off}]"
+                fi
+            else
+                PS1_GIT=" [${color_bold}${color_red}${GIT_BRANCH}${color_white}*${color_off}]"
+            fi
+        fi
+    fi
+
+    # set new color prompt
+    PS1="${color_bold}${color_user}${USER}@${HOSTNAME}${color_off} ${color_bold}${color_blue}${PWDNAME}${color_off}${PS1_GIT} ${color_bold}${color_blue}\$${color_off} "
+}
+
+function light_prompt_command {
+
+    parse_git_branch () {
+      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+    }
+
+    PS1="${color_bold}${color_green}\u@\h${color_off} ${color_bold}${color_blue}\w${color_off}${color_bold}${color_red}\$(parse_git_branch)${color_off} ${color_bold}${color_blue}\$${color_off} "
+}
+
+PROMPT_COMMAND=light_prompt_command
+
+# vim:ft=sh:

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DIR=`dirname $0`
+
+cp $DIR/.bash* ~/
+cp $DIR/.gitconfig ~/
+cat $DIR/.profile >> ~/.profile
+cp $DIR/.tmux.conf ~/
+cp -r $DIR/.vim ~/
+
+~/.vim/setup

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+VIM_DIR=`dirname $0`
+VUNDLE_DIR=$VIM_DIR/bundle/Vundle.vim
+
+echo "Setting-up VIM..."
+
+if [ ! -d $VUNDLE_DIR ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git $VUNDLE_DIR
+fi
+
+mkdir -p $VIM_DIR/.undo_history
+
+vim '+PluginUpdate' '+qa!'
+
+echo "Setting-up VIM... DONE"

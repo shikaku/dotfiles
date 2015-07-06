@@ -1,0 +1,78 @@
+[user]
+    name = "%user_name%"
+    email = "%user_email%"
+
+[core]
+    whitespace = fix,trailing-space,-tab-in-indent,tabwidth=4
+    autocrlf = input
+    #pager = less -x1,5 -FRSX
+    editor = vim
+    ; eol = lf
+
+[i18n]
+    commitencoding = UTF-8
+    logoutputencoding = UTF-8
+
+[help]
+    autocorrect = 0
+
+[push]
+    default = matching
+
+#[branch]
+    #autosetuprebase = always
+
+[merge]
+    ff = false
+    tool = vimdiff
+    conflictstyle = merge
+
+[mergetool]
+    prompt = false
+
+; [diff]
+;     external = git_diff_wrapper
+;
+; [pager]
+;     diff=
+
+[alias]
+    up = pull
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    sta = stash
+    di = diff
+    dic = diff --cached
+    rma = !git status | grep deleted | cut -d ' ' -f 5 | xargs git rm
+    un = reset HEAD --
+    unf = reset --hard HEAD
+    slog = log --pretty=format:'%cd [%h] %an: %s' --date=short
+    glog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    last = log -1 HEAD
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    pager = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = blue reverse
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan

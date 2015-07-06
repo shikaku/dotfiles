@@ -1,0 +1,22 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plug in bundled scripts
+source ~/.vim/startup/plugins.vim
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Plug in custom scripts
+source ~/.vim/after/noreplacemode.vim
+
+" Load custom settings
+source ~/.vim/startup/color.vim
+source ~/.vim/startup/mappings.vim
+source ~/.vim/startup/settings.vim
+source ~/.vim/startup/autocommands.vim
