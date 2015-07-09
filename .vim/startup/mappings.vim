@@ -72,3 +72,4 @@ cnoreabbrev Wq wq
 cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
+cnoreabbrev Set set
