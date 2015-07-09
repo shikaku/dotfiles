@@ -2,6 +2,7 @@
 
 DIR=`dirname $0`
 
+rename 's/$/.bak/' ~/.bash*
 cp $DIR/.bash* ~/
 cp $DIR/.gitconfig ~/
 cat $DIR/.profile >> ~/.profile
