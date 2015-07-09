@@ -96,6 +96,8 @@ PATH=$HOME/opt/tmux/bin:$PATH
 PATH=$HOME/local/bin:$PATH
 PATH=$PATH:/opt/usr/bin:/sbin:/usr/sbin
 
+export VIM=$HOME/opt/vim/share/vim/
+
 # set editor by default
 EDITOR="vim"
 
