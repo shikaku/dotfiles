@@ -67,9 +67,10 @@ autocmd FileType css noremap <buffer> <F8> :call CSSBeautify()<cr>
 
 " Command-mode abbreviations
 cnoreabbrev h tab help
+cnoreabbrev Set set
+cnoreabbrev E e
 cnoreabbrev W w
 cnoreabbrev Wq wq
 cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
-cnoreabbrev Set set
