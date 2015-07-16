@@ -119,6 +119,12 @@ shopt -s checkwinsize
 # set vi mode
 set -o vi
 
+# fix ssh-agent auth for multiplexers
+_ssh_auth_save() {
+    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock.$HOSTNAME"
+}
+alias tmux='_ssh_auth_save ; export HOSTNAME=$(hostname) ; tmux'
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
