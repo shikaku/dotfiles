@@ -95,10 +95,12 @@ set grepprg=ag\ --hidden\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
 
 " Syntastic
-let g:syntastic_javascript_checkers = ["jshint"]
-let g:syntastic_mode_map = { "mode": "passive" }
+let g:syntastic_javascript_checkers = ["eslint"]
+" let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_auto_jump = 0
-let g:syntastic_auto_loc_list = 2 "don't open location-list
+" let g:syntastic_auto_loc_list = 2 "don't open location-list
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
 
 " Matchit. Add match patterns
 autocmd FileType * if !exists('b:match_words') | let b:match_words = '' | else | let b:match_words = b:match_words.',' | endif | let b:match_words = b:match_words.'{:},(:),[:],":"'.",':'"
