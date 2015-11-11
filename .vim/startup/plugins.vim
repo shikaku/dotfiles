@@ -26,7 +26,7 @@ Plugin 'sjl/gundo.vim'                " Visual undo
 Plugin 'scrooloose/syntastic.git'     " Syntax checker
 Plugin 'vim-scripts/DfrankUtil'
 Plugin 'vim-scripts/vimprj'
-Plugin 'vim-scripts/indexer.tar.gz'
+" Plugin 'vim-scripts/indexer.tar.gz'
 Plugin 'rking/ag.vim'                 " Silver search wrapper
 Plugin 'maksimr/vim-jsbeautify'       " Beautifier
 Plugin 'guns/xterm-color-table.vim'
@@ -39,6 +39,6 @@ Plugin 'groenewege/vim-less'          " Less filetype
 
 " vim-scripts repos
 Plugin 'mru.vim'
-Plugin 'taglist.vim'
+" Plugin 'taglist.vim'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
