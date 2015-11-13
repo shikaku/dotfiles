@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 DIR=`dirname $0`
 
+# Process
 mv ~/.bashrc ~/.bashrc.bak
 cp $DIR/.bash* ~/
 cp $DIR/.gitconfig ~/
@@ -9,4 +10,5 @@ cat $DIR/.profile >> ~/.profile
 cp $DIR/.tmux.conf ~/
 cp -r $DIR/.vim ~/
 
+# Setup
 ~/.vim/setup
