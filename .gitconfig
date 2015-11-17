@@ -1,7 +1,3 @@
-[user]
-    name = "%user_name%"
-    email = "%user_email%"
-
 [core]
     whitespace = fix,trailing-space,-tab-in-indent,tabwidth=4
     autocrlf = input
