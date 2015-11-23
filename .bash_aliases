@@ -1,6 +1,6 @@
 alias e='vim -p'
-alias l='ls -lahF'
-alias lt='ls -lahFtr'
+alias l='ls -lAhF'
+alias lt='ls -lAhFtr'
 alias ll='ls -aF'
 alias mkdir='mkdir -p -v'
 alias grep='grep --colour=auto'
