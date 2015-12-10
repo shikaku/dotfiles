@@ -44,5 +44,5 @@ URxvt.cursorUnderline: false
 ! Pointer
 URxvt.pointerBlank: true
 
-! Double-click selection without *
-URxvt.cutchars: "*"
+! Double-click selection without * and '
+URxvt.cutchars: "*'"
