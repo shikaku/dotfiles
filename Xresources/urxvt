@@ -32,7 +32,7 @@ URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
 
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,fullscreen
 URxvt.matcher.button: 1
 URxvt.urlLauncher: firefox
 
@@ -44,5 +44,8 @@ URxvt.cursorUnderline: false
 ! Pointer
 URxvt.pointerBlank: true
 
-! Double-click selection without *
-URxvt.cutchars: "*"
+! Double-click selection without * and single quote
+URxvt.cutchars: "*'"
+
+! Fullscreen switch
+URxvt.keysym.F11: perl:fullscreen:switch

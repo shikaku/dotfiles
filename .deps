@@ -9,5 +9,6 @@ python-dev
 python3.4-dev
 libperl-dev
 xorg-dev
+wmctrl
 libncurses-dev
 vim
