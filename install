@@ -9,6 +9,7 @@ cp $DIR/.gitconfig ~/
 cat $DIR/.profile >> ~/.profile
 cp $DIR/.tmux.conf ~/
 cp -r $DIR/.vim ~/
+cp -r $DIR/.terminfo ~/
 
 # Setup
 ~/.vim/setup
