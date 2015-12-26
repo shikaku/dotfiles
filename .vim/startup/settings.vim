@@ -6,7 +6,8 @@ set cursorline
 set nowrap
 set number
 set laststatus=2
-set list listchars=tab:··,trail:∼,extends:›,precedes:‹
+set listchars=tab:>∼,trail:·,extends:›,precedes:‹
+set list
 set shortmess+=I
 set tabpagemax=50
 set iskeyword+=-
