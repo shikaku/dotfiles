@@ -2,7 +2,7 @@ set noswapfile
 set lazyredraw
 set history=3000
 
-set cursorline
+" set cursorline
 set nowrap
 set number
 set laststatus=2
