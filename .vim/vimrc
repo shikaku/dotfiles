@@ -12,11 +12,7 @@ source ~/.vim/startup/plugins.vim
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Plug in custom scripts
-source ~/.vim/after/noreplacemode.vim
-
 " Load custom settings
 source ~/.vim/startup/color.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
-source ~/.vim/startup/autocommands.vim
