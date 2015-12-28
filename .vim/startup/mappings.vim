@@ -58,12 +58,10 @@ nnoremap <silent> <Space> :nohlsearch<CR>
 " nnoremap <A-Right> :vertical resize +2<CR>
 " nnoremap <A-Left> :vertical resize -2<CR>
 
-" Open Help in new window
-cnoreabbrev h tab help
-
 autocmd FileType javascript noremap <buffer> <F8> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <F8> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <F8> :call CSSBeautify()<cr>
+autocmd FileType help nnoremap <buffer> q :q<CR>
 
 " Command-mode abbreviations
 cnoreabbrev h tab help
