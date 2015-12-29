@@ -35,7 +35,10 @@ Plugin 'heavenshell/vim-jsdoc'
 " Plugin 'Shougo/neocomplete.vim'
 Plugin 'junegunn/vim-easy-align'      " Alignment
 Plugin 'kshenoy/vim-signature'        " Visual marks
-Plugin 'groenewege/vim-less'          " Less filetype
+
+" Filetypes
+Plugin 'groenewege/vim-less'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " vim-scripts repos
 Plugin 'mru.vim'
