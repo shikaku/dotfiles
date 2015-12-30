@@ -37,7 +37,6 @@ Plugin 'junegunn/vim-easy-align'      " Alignment
 Plugin 'kshenoy/vim-signature'        " Visual marks
 
 " Filetypes
-Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
 
 " vim-scripts repos
