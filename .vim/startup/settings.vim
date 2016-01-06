@@ -54,9 +54,6 @@ set fileformat=unix
 set ffs=unix,dos,mac
 set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866,latin1
 
-" Adding suffixes to the file path for the 'gf', '[I', etc. commands
-set suffixesadd=.js,.ts,.html,.tpl,.css,.less
-
 " " Highlight 81st char of line
 " :call matchadd('ColorColumn', '\%81v', 100)
 
