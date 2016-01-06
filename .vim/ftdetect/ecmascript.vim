@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.es,*.es6 setf javascript
+autocmd BufNewFile,BufRead *.es,*.es5,*.es6,*.es7 setfiletype ecmascript
