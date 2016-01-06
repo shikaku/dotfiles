@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.xr setf xdefaults
+autocmd BufNewFile,BufRead *.xr setfiletype xdefaults
