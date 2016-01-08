@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.pcss setfiletype less.postcss
+autocmd BufNewFile,BufRead *.pcss setfiletype postcss
