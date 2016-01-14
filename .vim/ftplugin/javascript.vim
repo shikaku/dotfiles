@@ -3,6 +3,6 @@
 " endif
 " let b:did_ftplugin = 1
 
-setl shiftwidth=2
+setl suffixesadd+=.js
 
-let b:undo_ftplugin = "setl shiftwidth<"
+let b:undo_ftplugin = "setl suffixesadd<"

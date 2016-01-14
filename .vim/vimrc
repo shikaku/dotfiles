@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" TODO: a strange bahaviour of some vundle's filetype plugins (if place it
+" after vundle's defenition)
+syntax enable
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -12,11 +16,7 @@ source ~/.vim/startup/plugins.vim
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Plug in custom scripts
-source ~/.vim/after/noreplacemode.vim
-
 " Load custom settings
-source ~/.vim/startup/color.vim
+source ~/.vim/startup/colorscheme.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
-source ~/.vim/startup/autocommands.vim
