@@ -21,7 +21,6 @@ set sidescrolloff=4
 
 let &helpheight=&ttyscroll
 
-set wrapscan
 set hlsearch
 set incsearch
 set showmatch
