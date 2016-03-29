@@ -73,6 +73,9 @@ let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 
+" EditConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
 " MRU
 let MRU_File = $HOME.'/.vim/.vim_mru_files'
 let MRU_Max_Entries = 2000

@@ -35,6 +35,7 @@ Plugin 'heavenshell/vim-jsdoc'
 " Plugin 'Shougo/neocomplete.vim'
 Plugin 'junegunn/vim-easy-align'      " Alignment
 Plugin 'kshenoy/vim-signature'        " Visual marks
+Plugin 'editorconfig/editorconfig-vim' " EdotorConfig
 
 " Filetypes
 Plugin 'mustache/vim-mustache-handlebars'

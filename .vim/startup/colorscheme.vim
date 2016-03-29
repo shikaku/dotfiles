@@ -6,4 +6,4 @@ let g:lucius_use_underline=0
 
 LuciusDark
 
-hi! link ColorColumn Error
+" hi! link ColorColumn Error
