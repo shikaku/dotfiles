@@ -72,7 +72,7 @@ cnoreabbrev Wq wq
 cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
-cnoreabbrev sudow w !sudo tee %
+cnoreabbrev Cq cq
 
 " Russian key bindings
 map ё `
