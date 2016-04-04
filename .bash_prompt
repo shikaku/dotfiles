@@ -118,7 +118,9 @@ function highlight_exit_code() {
 
 # PROMPT_COMMAND=light_prompt_command
 
-source ~/repos/dotfiles/lib/git-prompt.sh
+if [ -f ~/repos/github/dotfiles/lib/git-prompt.sh ]; then
+    source ~/repos/github/dotfiles/lib/git-prompt.sh
+fi
 
 GIT_PS1_SHOWCOLORHINTS=1
 
