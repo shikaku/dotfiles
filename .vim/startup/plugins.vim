@@ -1,5 +1,5 @@
 " Github repos
-Plugin 'gmarik/Vundle.vim'            " Plugin manager
+Plugin 'VundleVim/Vundle.vim'            " Plugin manager
 Plugin 'SirVer/ultisnips'             " Snippet functionality
 Plugin 'honza/vim-snippets'           " Set of snippets
 Plugin 'tpope/vim-fugitive'           " Git wrapper
