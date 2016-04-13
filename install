@@ -1,15 +1,16 @@
 #!/bin/bash
-
 DIR=`dirname $0`
 
-# Process
-mv ~/.bashrc ~/.bashrc.bak
+# Backuping
+rename 's/$/.bak/' ~/.bash*
+
+# Copying
 cp $DIR/.bash* ~/
-cp $DIR/.gitconfig ~/
 cat $DIR/.profile >> ~/.profile
 cp $DIR/.tmux.conf ~/
+cp $DIR/.gitconfig ~/
 cp -r $DIR/.vim ~/
 cp -r $DIR/.terminfo ~/
 
-# Setup
+# Setuping
 ~/.vim/setup
