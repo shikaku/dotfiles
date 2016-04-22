@@ -1,0 +1,2 @@
+# vi mode for utils that use GNU Readline
+set editing-mode vi

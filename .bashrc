@@ -116,9 +116,6 @@ HISTFILESIZE=100000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# set vi mode
-set -o vi
-
 # fix ssh-agent auth for multiplexers
 _ssh_auth_save() {
     ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock.$HOSTNAME"
