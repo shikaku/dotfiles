@@ -26,7 +26,8 @@
 [mergetool]
     prompt = false
 
-; [diff]
+[diff]
+    noprefix = true
 ;     external = git_diff_wrapper
 ;
 ; [pager]
