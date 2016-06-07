@@ -12,3 +12,4 @@ xorg-dev
 wmctrl
 libncurses-dev
 vim
+jq
