@@ -41,7 +41,7 @@
     sta = stash
     di = diff
     dic = diff --cached
-    diw = diff -w --color-words
+    diw = diff -w --color-words --no-prefix
     rma = !git status | grep deleted | cut -d ' ' -f 5 | xargs git rm
     un = reset HEAD --
     unf = reset --hard HEAD
