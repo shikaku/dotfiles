@@ -115,3 +115,5 @@ let g:switch_custom_definitions =
     \     '\(\k\+\),\s*\(\k\+\)': '\2, \1',
     \   },
     \ ]
+
+let g:inline_edit_autowrite = 1
