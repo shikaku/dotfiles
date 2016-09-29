@@ -15,8 +15,7 @@ set pastetoggle=<F9>
 map <Home> ^
 imap <Home> <ESC>^i
 vmap P "_dP
-map ,t :tabnew<CR>
-map! ,t <ESC>:tabnew<CR>
+nnoremap <Leader>t :tabnew<CR>
 " nmap <CR> o<ESC>
 " nmap <BS> dd<ESC>k
 
