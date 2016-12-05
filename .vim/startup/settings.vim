@@ -36,6 +36,10 @@ set smarttab
 set autoindent
 " set smartindent
 
+set breakindent
+set breakindentopt=sbr
+set showbreak=~>
+
 " set shellcmdflag=-ic
 
 " Undo history
