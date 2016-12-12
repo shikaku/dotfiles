@@ -6,7 +6,7 @@ set history=3000
 set nowrap
 set number
 set laststatus=2
-set listchars=tab:>·,trail:·,extends:›,precedes:‹
+set listchars=tab:▶·,trail:·,extends:▶,precedes:◀
 set list
 set shortmess+=I
 set tabpagemax=50
@@ -38,7 +38,7 @@ set autoindent
 
 set breakindent
 set breakindentopt=sbr
-set showbreak=~>
+set showbreak=▶▶
 
 " set shellcmdflag=-ic
 
