@@ -37,6 +37,7 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'junegunn/vim-easy-align'      " Alignment
 Plugin 'kshenoy/vim-signature'        " Visual marks
 Plugin 'editorconfig/editorconfig-vim' " EdotorConfig
+Plugin 'mxw/vim-jsx'
 
 " Filetypes
 Plugin 'mustache/vim-mustache-handlebars'
