@@ -15,7 +15,7 @@ Plugin 'AndrewRadev/inline_edit.vim'  " Edit nested code snippets
 " Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'      " Fast motion
-Plugin 'edsono/vim-matchit'           " Extend matchit
+Plugin 'tmhedberg/matchit'            " Extend matchit
 Plugin 'vim-airline/vim-airline'      " Customizable status line
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'airblade/vim-gitgutter'
