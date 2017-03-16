@@ -124,6 +124,6 @@ fi
 
 GIT_PS1_SHOWCOLORHINTS=1
 
-PROMPT_COMMAND='__git_ps1 "`highlight_exit_code`${BOLD}${AQUA}\u@\h${OFF} ${BOLD}${BLUE}\w${OFF}" " $ " " [%s]"'
+PROMPT_COMMAND='__git_ps1 "`highlight_exit_code`${BOLD}${AQUA}\u@\h${OFF}" " ${BOLD}${BLUE}\W${OFF} # " " [%s]"'
 
 # vim:ft=sh:
