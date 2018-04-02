@@ -23,7 +23,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'shemerey/vim-project'
 Plugin 'sjl/gundo.vim'                " Visual undo
 " Plugin 'kana/vim-textobj-user'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic.git'     " Syntax checker
 Plugin 'vim-scripts/DfrankUtil'
 Plugin 'vim-scripts/vimprj'
