@@ -1,49 +1,45 @@
 " Github repos
-Plugin 'VundleVim/Vundle.vim'            " Plugin manager
-Plugin 'SirVer/ultisnips'             " Snippet functionality
-Plugin 'honza/vim-snippets'           " Set of snippets
-Plugin 'tpope/vim-fugitive'           " Git wrapper
-Plugin 'tpope/vim-commentary'         " Fast comments
-Plugin 'tpope/vim-surround'           " Fast brackets
-Plugin 'tpope/vim-abolish'            " Coercion
-Plugin 'tpope/vim-repeat'             " Extended repeat action
-Plugin 'tpope/vim-dispatch.git'       " Async commands
-Plugin 'AndrewRadev/switch.vim'       " Switch text segments
-Plugin 'AndrewRadev/sideways.vim'     " Move arguments
-Plugin 'AndrewRadev/linediff.vim'     " Compare blocks
-Plugin 'AndrewRadev/inline_edit.vim'  " Edit nested code snippets
-" Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'Lokaltog/vim-easymotion'      " Fast motion
-Plugin 'tmhedberg/matchit'            " Extend matchit
-Plugin 'vim-airline/vim-airline'      " Customizable status line
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'airblade/vim-gitgutter'
-" Plugin 'jiangmiao/auto-pairs'
-" Plugin 'shemerey/vim-project'
-Plugin 'sjl/gundo.vim'                " Visual undo
-" Plugin 'kana/vim-textobj-user'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/syntastic.git'     " Syntax checker
-Plugin 'vim-scripts/DfrankUtil'
-Plugin 'vim-scripts/vimprj'
-" Plugin 'vim-scripts/indexer.tar.gz'
-Plugin 'rking/ag.vim'                 " Silver search wrapper
-Plugin 'maksimr/vim-jsbeautify'       " Beautifier
-Plugin 'guns/xterm-color-table.vim'
-Plugin 'csscomb/vim-csscomb.git'      " A brush for CSS
-Plugin 'heavenshell/vim-jsdoc'
-" Plugin 'Shougo/neocomplete.vim'
-Plugin 'junegunn/vim-easy-align'      " Alignment
-Plugin 'kshenoy/vim-signature'        " Visual marks
-Plugin 'editorconfig/editorconfig-vim' " EdotorConfig
-Plugin 'mxw/vim-jsx'
+Plug 'VundleVim/Vundle.vim'            " Plug manager
+Plug 'SirVer/ultisnips'             " Snippet functionality
+Plug 'honza/vim-snippets'           " Set of snippets
+Plug 'tpope/vim-fugitive'           " Git wrapper
+Plug 'tpope/vim-commentary'         " Fast comments
+Plug 'tpope/vim-surround'           " Fast brackets
+Plug 'tpope/vim-abolish'            " Coercion
+Plug 'tpope/vim-repeat'             " Extended repeat action
+Plug 'AndrewRadev/switch.vim'       " Switch text segments
+Plug 'AndrewRadev/sideways.vim'     " Move arguments
+Plug 'AndrewRadev/linediff.vim'     " Compare blocks
+Plug 'AndrewRadev/inline_edit.vim'  " Edit nested code snippets
+" Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'Lokaltog/vim-easymotion'      " Fast motion
+Plug 'tmhedberg/matchit'            " Extend matchit
+Plug 'vim-airline/vim-airline'      " Customizable status line
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'shemerey/vim-project'
+Plug 'sjl/gundo.vim'                " Visual undo
+" Plug 'kana/vim-textobj-user'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/DfrankUtil'
+Plug 'vim-scripts/vimprj'
+" Plug 'vim-scripts/indexer.tar.gz'
+Plug 'rking/ag.vim'                 " Silver search wrapper
+Plug 'maksimr/vim-jsbeautify'       " Beautifier
+Plug 'guns/xterm-color-table.vim'
+Plug 'heavenshell/vim-jsdoc'
+" Plug 'Shougo/neocomplete.vim'
+Plug 'junegunn/vim-easy-align'      " Alignment
+Plug 'kshenoy/vim-signature'        " Visual marks
+Plug 'editorconfig/editorconfig-vim' " EdotorConfig
+Plug 'mxw/vim-jsx'
 
 " Filetypes
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 
 " vim-scripts repos
-Plugin 'mru.vim'
-" Plugin 'taglist.vim'
-Plugin 'L9'
-Plugin 'FuzzyFinder'
+Plug 'vim-scripts/mru.vim'
+" Plug 'vim-scripts/taglist.vim'
+Plug 'vim-scripts/L9'

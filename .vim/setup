@@ -1,16 +1,14 @@
 #!/bin/sh
 
 VIM_DIR=`dirname $0`
-VUNDLE_DIR=$VIM_DIR/bundle/Vundle.vim
 
-echo "Setting-up VIM..."
+echo "Setting up VIM: in progress"
 
-if [ ! -d $VUNDLE_DIR ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git $VUNDLE_DIR
-fi
+curl -fLo $VIM_DIR/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir -p $VIM_DIR/.undo_history
 
-vim '+PluginUpdate' '+qa!'
+vim "+PlugInstall" "+qa!"
 
-echo "Setting-up VIM... DONE"
+echo "Setting up VIM: done"
