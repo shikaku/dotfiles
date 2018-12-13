@@ -1,5 +1,4 @@
 " Github repos
-Plug 'VundleVim/Vundle.vim'            " Plug manager
 Plug 'SirVer/ultisnips'             " Snippet functionality
 Plug 'honza/vim-snippets'           " Set of snippets
 Plug 'tpope/vim-fugitive'           " Git wrapper
@@ -7,6 +6,7 @@ Plug 'tpope/vim-commentary'         " Fast comments
 Plug 'tpope/vim-surround'           " Fast brackets
 Plug 'tpope/vim-abolish'            " Coercion
 Plug 'tpope/vim-repeat'             " Extended repeat action
+Plug 'tpope/vim-ragtag'
 Plug 'AndrewRadev/switch.vim'       " Switch text segments
 Plug 'AndrewRadev/sideways.vim'     " Move arguments
 Plug 'AndrewRadev/linediff.vim'     " Compare blocks
@@ -22,7 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'shemerey/vim-project'
 Plug 'sjl/gundo.vim'                " Visual undo
 " Plug 'kana/vim-textobj-user'
-Plug 'altercation/vim-colors-solarized'
+Plug 'jonathanfilip/vim-lucius'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 " Plug 'vim-scripts/indexer.tar.gz'
@@ -35,6 +35,7 @@ Plug 'junegunn/vim-easy-align'      " Alignment
 Plug 'kshenoy/vim-signature'        " Visual marks
 Plug 'editorconfig/editorconfig-vim' " EdotorConfig
 Plug 'mxw/vim-jsx'
+Plug 'iloginow/vim-stylus'
 
 " Filetypes
 Plug 'mustache/vim-mustache-handlebars'
@@ -43,3 +44,5 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'vim-scripts/mru.vim'
 " Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/L9'
+
+Plug 'udalov/kotlin-vim'

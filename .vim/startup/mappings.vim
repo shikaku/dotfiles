@@ -4,8 +4,8 @@ imap <F1> <C-o>:tabprevious<CR>
 map <F2> :tabnext<CR>
 cmap <F2> <ESC>:tabnext<CR>
 imap <F2> <C-o>:tabnext<CR>
-map <F3> :FufFile<CR>
-map! <F3> <ESC>:FufFile<CR>
+map <F3> :exe 'cd' expand("%:h")<CR> :Lexplore<CR>
+map! <F3> <ESC>:exe 'cd' expand("%:h")<CR> :Lexplore<CR>
 nmap <silent> <F4> <Plug>ToggleProject
 map <F6> :TagbarToggle<CR>
 map! <F6> <ESC>:TagbarToggle<CR>
@@ -61,6 +61,8 @@ autocmd FileType javascript noremap <buffer> <F8> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <F8> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <F8> :call CSSBeautify()<cr>
 autocmd FileType help nnoremap <buffer> q :q<CR>
+autocmd FileType help nnoremap <buffer> <F1> :tabprev<CR>
+autocmd FileType netrw nnoremap <buffer> <F1> :tabprev<CR>
 
 " Command-mode abbreviations
 cnoreabbrev h tab help
@@ -72,6 +74,7 @@ cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
 cnoreabbrev Cq cq
+cnoreabbrev Preview !open -a /Applications/Preview.app/ %
 
 " Russian key bindings
 map ё `

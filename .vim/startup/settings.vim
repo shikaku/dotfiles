@@ -15,7 +15,7 @@ set isfname-==
 set ruler
 set noshowmode
 
-let &scrolloff=3
+let &scrolloff=2
 set sidescroll=1
 set sidescrolloff=4
 
@@ -72,7 +72,7 @@ let g:airline_detect_modified = 1
 let g:airline_detect_paste = 1
 let g:airline_detect_crypt = 1
 let g:airline_detect_iminsert=1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'distinguished'
 " let g:airline_extensions  =  ['branch', 'tabline']
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
@@ -121,3 +121,9 @@ let g:switch_custom_definitions =
     \ ]
 
 let g:inline_edit_autowrite = 1
+
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0 
+let g:netrw_browse_split = 0
+let g:netrw_altv = 1
+let g:netrw_winsize = 25

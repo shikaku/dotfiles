@@ -1,8 +1,9 @@
-syntax enable
-
-let g:solarized_termtrans=1
+" set t_Co=256
 set background=dark
-" or
-" set background=light
 
-colorscheme solarized
+color lucius
+let g:lucius_use_underline=0
+
+LuciusDark
+
+" hi! link ColorColumn Error
