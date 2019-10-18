@@ -20,7 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'jiangmiao/auto-pairs'
 " Plug 'shemerey/vim-project'
-Plug 'sjl/gundo.vim'                " Visual undo
+Plug 'mbbill/undotree'                " Visual undo
 " Plug 'kana/vim-textobj-user'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'vim-scripts/DfrankUtil'

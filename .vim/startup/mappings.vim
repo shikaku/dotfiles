@@ -7,8 +7,9 @@ imap <F2> <C-o>:tabnext<CR>
 map <F3> :exe 'cd' expand("%:h")<CR> :Lexplore<CR>
 map! <F3> <ESC>:exe 'cd' expand("%:h")<CR> :Lexplore<CR>
 nmap <silent> <F4> <Plug>ToggleProject
-map <F6> :TagbarToggle<CR>
-map! <F6> <ESC>:TagbarToggle<CR>
+map <F5> :UndotreeToggle<CR>
+cmap <F5> <ESC>:UndotreeToggle<CR>
+imap <F5> <C-o>:UndotreeToggle<CR>
 map <F7> :!tidy -e % 2>&1 <Bar> grep -i 'missing'<CR>
 map! <F7> <ESC>:!tidy -e % 2>&1 <Bar> grep -i 'missing'<CR>
 set pastetoggle=<F9>
