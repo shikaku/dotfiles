@@ -7,7 +7,7 @@ let s:projectsPat =  '\(/repos/[^/]\+\).*'
 
 setl suffixesadd+=.js
 
-let s:extList = split(&suffixesadd, ',')
+let s:extList = [''] + split(&suffixesadd, ',')
 
 func! Includeexpr(path)
     let rootPath = substitute(expand("%:p"), s:projectsPat, '\1', 'g')
