@@ -40,6 +40,8 @@ set breakindent
 set breakindentopt=sbr
 set showbreak=▶▶
 
+set fo+=j " join comments
+
 " set shellcmdflag=-ic
 
 " Undo history
