@@ -3,14 +3,10 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
-let s:projectsPat =  '\(/repos/[^/]\+\).*'
-
-setl suffixesadd+=.js
-
 let s:extList = [''] + split(&suffixesadd, ',')
 
 func! Includeexpr(path)
-    let rootPath = substitute(expand("%:p"), s:projectsPat, '\1', 'g')
+    let rootPath = FindProjectRoot()
     let searchPath = substitute(a:path, '^@/', 'src/', 'g')
 
     for srcDir in ['.','node_modules']
@@ -41,6 +37,20 @@ func! Includeexpr(path)
     endfor
 
     return a:path
+endfunc
+
+func! FindProjectRoot()
+    let root = expand("%:p")
+
+    while empty(globpath(root, 'package.json'))
+        let root = fnamemodify(root, ':h')
+
+        if (root == '/')
+            return root
+        endif
+    endwhile
+
+    return root
 endfunc
 
 setl includeexpr=Includeexpr(v:fname)
