@@ -28,7 +28,8 @@ func! Includeexpr(path)
         let packageJsonPath = searchDir.'/package.json'
 
         if filereadable(packageJsonPath)
-            let tryPath = searchDir.'/'.json_decode(join(readfile(packageJsonPath))).main
+            let package = json_decode(join(readfile(packageJsonPath)))
+            let tryPath = searchDir.'/'.get(package, 'module', package.main)
 
             if filereadable(tryPath)
                 return tryPath
