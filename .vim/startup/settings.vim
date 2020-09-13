@@ -12,6 +12,7 @@ set shortmess+=I
 set tabpagemax=50
 set iskeyword+=-
 set isfname-==
+set isfname+=@-@
 set ruler
 set noshowmode
 
@@ -129,3 +130,6 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+let g:SuperTabDefaultCompletionType="<c-x><c-o>"
+set completeopt+=menuone

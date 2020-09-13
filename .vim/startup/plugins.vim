@@ -46,3 +46,9 @@ Plug 'vim-scripts/mru.vim'
 Plug 'vim-scripts/L9'
 
 Plug 'udalov/kotlin-vim'
+
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'Quramy/tsuquyomi' " TypeScript IDE
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " dep for TypeScript
+
+Plug 'ervandew/supertab' " omnicomplete by tab
