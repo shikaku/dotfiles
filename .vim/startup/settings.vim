@@ -61,6 +61,8 @@ set fileformat=unix
 set ffs=unix,dos,mac
 set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866,latin1
 
+set updatetime=100
+
 " " Highlight 81st char of line
 " :call matchadd('ColorColumn', '\%81v', 100)
 
@@ -133,3 +135,6 @@ let g:netrw_winsize = 25
 
 let g:SuperTabDefaultCompletionType="<c-x><c-o>"
 set completeopt+=menuone
+
+" Enable GitGutter at startup
+autocmd VimEnter * :GitGutterEnable

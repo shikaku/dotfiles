@@ -52,3 +52,4 @@ Plug 'Quramy/tsuquyomi' " TypeScript IDE
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} " dep for TypeScript
 
 Plug 'ervandew/supertab' " omnicomplete by tab
+Plug 'airblade/vim-gitgutter'
