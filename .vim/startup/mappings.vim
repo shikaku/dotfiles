@@ -1,9 +1,4 @@
-map <F1> :tabprevious<CR>
-cmap <F1> <ESC>:tabprevious<CR>
-imap <F1> <C-o>:tabprevious<CR>
-map <F2> :tabnext<CR>
-cmap <F2> <ESC>:tabnext<CR>
-imap <F2> <C-o>:tabnext<CR>
+nmap gr gT
 map <F3> :exe 'cd' expand("%:h")<CR> :Lexplore<CR>
 map! <F3> <ESC>:exe 'cd' expand("%:h")<CR> :Lexplore<CR>
 nmap <silent> <F4> <Plug>ToggleProject
@@ -58,9 +53,6 @@ nnoremap <silent> <Space> :nohlsearch<CR>
 " nnoremap <A-Right> :vertical resize +2<CR>
 " nnoremap <A-Left> :vertical resize -2<CR>
 
-autocmd FileType javascript noremap <buffer> <F8> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <F8> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <F8> :call CSSBeautify()<cr>
 autocmd FileType help nnoremap <buffer> q :q<CR>
 autocmd FileType help nnoremap <buffer> <F1> :tabprev<CR>
 autocmd FileType netrw nnoremap <buffer> <F1> :tabprev<CR>
@@ -75,6 +67,7 @@ cnoreabbrev Q q
 cnoreabbrev Qa qa
 cnoreabbrev QA qa
 cnoreabbrev Cq cq
+cnoreabbrev Tabe tabe
 cnoreabbrev Preview !open -a /Applications/Preview.app/ %
 
 " Russian key bindings

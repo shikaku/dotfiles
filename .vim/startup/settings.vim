@@ -2,7 +2,7 @@ set noswapfile
 set lazyredraw
 set history=3000
 
-" set cursorline
+set cursorline
 set nowrap
 set number
 set laststatus=2
@@ -16,11 +16,11 @@ set isfname+=@-@
 set ruler
 set noshowmode
 
-let &scrolloff=2
+let &scrolloff=1
 set sidescroll=1
 set sidescrolloff=4
 
-let &helpheight=&ttyscroll
+let &helpheight=999
 
 set nowrapscan
 set hlsearch
@@ -30,7 +30,7 @@ set ignorecase
 
 set backspace=2
 
-set tabstop=4
+set tabstop=2
 let &shiftwidth=&tabstop
 set expandtab
 set smarttab
@@ -62,6 +62,8 @@ set ffs=unix,dos,mac
 set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866,latin1
 
 set updatetime=100
+
+set signcolumn=yes
 
 " " Highlight 81st char of line
 " :call matchadd('ColorColumn', '\%81v', 100)
@@ -112,8 +114,11 @@ let g:syntastic_auto_jump = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 
-" Matchit. Add match patterns
-autocmd FileType * if !exists('b:match_words') | let b:match_words = '' | else | let b:match_words = b:match_words.',' | endif | let b:match_words = b:match_words.'{:},(:),[:],":"'.",':'"
+" " Matchit. Add match patterns
+" autocmd FileType * if !exists('b:match_words') | let b:match_words = '' | else | let b:match_words = b:match_words.',' | endif | let b:match_words = b:match_words.'{:},(:),[:],":"'.",':'"
+"
+" Matchup don't highlight
+let g:matchup_matchparen_enabled = 0
 
 " Switch
 let g:switch_mapping = ""
@@ -133,8 +138,26 @@ let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-let g:SuperTabDefaultCompletionType="<c-x><c-o>"
-set completeopt+=menuone
+" augroup prettier
+"   autocmd!
+"   autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.html PrettierAsync
+" augroup END
+" let g:prettier#autoformat = 0
+" let g:prettier#autoformat_config_present = 0
+
+" let g:deoplete#enable_at_startup = 1
+
+" let g:SuperTabDefaultCompletionType="<c-x><c-o>"
+" set completeopt+=menuone
+
+" g:tsuquyomi_completion_detail = 1
+
+" let b:ale_fixers = ['tslint', 'eslint']
+" let g:ale_fix_on_save = 1
+"
 
 " Enable GitGutter at startup
 autocmd VimEnter * :GitGutterEnable
+
+" CoC (LSP)
+runtime startup/settings/coc.vim
