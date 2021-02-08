@@ -16,13 +16,18 @@ endif
 
 " color dogrun
 
-" set background=dark
 " colorscheme deep-space
 
 " color mountaineer-grey
 
-let g:sonokai_style = 'maia'
-colorscheme sonokai
+" let g:sonokai_style = 'maia'
+" colorscheme sonokai
 
 " set background=dark
 " colorscheme oceanic_material
+
+color nord
+
+" set background=dark
+" let g:two_firewatch_italics=1
+" colo two-firewatch
