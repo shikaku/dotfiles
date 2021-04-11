@@ -102,3 +102,5 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Plug 'jxnblk/vim-mdx-js'
 Plug 'tmux-plugins/vim-tmux'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
