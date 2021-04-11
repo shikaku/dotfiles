@@ -1,7 +1,7 @@
-alias e='vim -p'
+alias e='nvim -p'
 alias l='ls -lAhF'
 alias lt='ls -lAhFtr'
 alias ll='ls -aF'
-alias mkdir='mkdir -p -v'
 alias grep='grep --colour=auto'
 alias ag='ag --hidden'
+alias sed="gsed"

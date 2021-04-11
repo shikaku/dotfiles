@@ -23,7 +23,7 @@ nnoremap = :SidewaysRight<CR>
 nnoremap + :Switch<CR>
 
 " global search
-noremap <Leader>/ :Ag! 
+noremap <Leader>/ :Ag!
 
 " inoremap <buffer> ' ''<Left>
 " inoremap <buffer> " ""<Left>
@@ -31,13 +31,13 @@ noremap <Leader>/ :Ag!
 " inoremap <buffer> [ []<Left>
 " inoremap <buffer> ( ()<Left>
 " inoremap <buffer> < <><Left>
-"
-inoremap <Leader>' ''<Left><CR><ESC>O
-inoremap <Leader>" ""<Left><CR><ESC>O
-inoremap <Leader>{ {}<Left><CR><ESC>O
-inoremap <Leader>[ []<Left><CR><ESC>O
-inoremap <Leader>( ()<Left><CR><ESC>O
-inoremap <Leader>< <><Left><CR><ESC>O
+
+inoremap <Leader>' ''<Left>
+inoremap <Leader>" ""<Left>
+inoremap <Leader>{ {}<Left>
+inoremap <Leader>[ []<Left>
+inoremap <Leader>( ()<Left>
+inoremap <Leader>< <><Left>
 
 " nnoremap <Up> ddkP
 " nnoremap <Down> ddp

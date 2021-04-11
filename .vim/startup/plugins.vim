@@ -2,6 +2,7 @@
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -88,22 +89,16 @@ Plug 'vifm/vifm.vim'
 Plug 'mxw/vim-jsx'
 
 " Color themes
-Plug 'AlessandroYorba/Arcadia'
-Plug 'AlessandroYorba/Despacio'
 Plug 'arcticicestudio/nord-vim'
-Plug 'co1ncidence/mountaineer.vim'
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'glepnir/oceanic-material'
+Plug 'arzg/vim-substrata'
 Plug 'jonathanfilip/vim-lucius'
-Plug 'lifepillar/vim-solarized8'
-Plug 'rakr/vim-one'
-Plug 'rakr/vim-two-firewatch'
-Plug 'sainnhe/sonokai'
 Plug 'tyrannicaltoucan/vim-deep-space'
-Plug 'wadackel/vim-dogrun'
 
 " A collection of language packs for Vim.
 Plug 'posva/vim-vue'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Plug 'jxnblk/vim-mdx-js'
+Plug 'tmux-plugins/vim-tmux'

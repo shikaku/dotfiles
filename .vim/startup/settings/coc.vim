@@ -5,9 +5,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-tsserver',
     \ 'coc-sh',
-    \ 'coc-pairs',
     \ 'coc-snippets',
-    \ 'coc-highlight',
     \ 'coc-css',
     \ 'coc-cssmodules',
     \ 'coc-yaml',
@@ -16,6 +14,7 @@ let g:coc_global_extensions = [
     \ 'coc-eslint',
     \ 'coc-tslint-plugin',
     \ 'coc-stylelint',
+    \ 'coc-highlight',
 \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -55,23 +54,47 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <C-w>gd :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <silent> gD <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-implementation)
 " nmap <silent> gy <Plug>(coc-type-definition)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nmap <leader>rn <Plug>(coc-rename)
+
+function! s:get_current_char()
+  return matchstr(getline('.'), '\%' . col('.') . 'c.')
+endfunction
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
-" " Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+function! s:show_signature()
+  if (s:get_current_char() =~ '^\S')
+    call CocActionAsync('doHover')
+  endif
+endfunction
+
+" Show code signature when holding the cursor
+" autocmd CursorMoved * call s:do_hover()
+autocmd CursorMoved * call s:show_signature()
+autocmd CmdlineChanged * call coc#float#close_all()
+if empty(&t_ku)
+  " Only for Neovim. In vim <Up>, etc... leads to unexpected A, etc... inserts
+  " nnoremap <silent><nowait> <Esc> :call coc#float#close_all()<CR>
+  nnoremap <silent><nowait> <Esc> :call coc#float#close(g:coc_last_float_win)<CR>
+endif
+
+" " Don't highlight word under doHover
+" hi link CocHoverRange CocCursorTransparent
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -88,15 +111,15 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" " Applying codeAction to the selected region.
-" " Example: `<leader>aap` for current paragraph
-" xmap <leader>a  <Plug>(coc-codeaction-selected)
-" nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
-" " Remap keys for applying codeAction to the current buffer.
-" nmap <leader>ac  <Plug>(coc-codeaction)
-" " Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.

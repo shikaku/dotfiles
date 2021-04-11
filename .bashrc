@@ -1,9 +1,11 @@
+export LANG="ru_RU.UTF-8"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export CLICOLOR=yes
 
 set -o vi
 
 # set editor by default
-EDITOR="vim"
+EDITOR="nvim"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

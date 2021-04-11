@@ -2,7 +2,7 @@
     whitespace = fix,trailing-space,-tab-in-indent,tabwidth=4
     autocrlf = input
     #pager = less -x1,5 -FRSX
-    editor = vim
+    editor = nvim
     ; eol = lf
 
 [i18n]
